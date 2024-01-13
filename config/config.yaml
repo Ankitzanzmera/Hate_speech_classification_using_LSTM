@@ -1,0 +1,8 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source: https://github.com/Ankitzanzmera/data_repository/raw/main/hate_speech_data.zip
+  local_data_filepath: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion/hate_speech_data/
+

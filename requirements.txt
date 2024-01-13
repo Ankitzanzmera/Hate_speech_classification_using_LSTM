@@ -1,0 +1,16 @@
+numpy
+pandas
+seaborn
+matplotlib
+scikit-learn
+tensorflow
+nltk
+regex
+from-root
+fastapi
+uvicorn
+Jinja2
+ensure
+python-box
+pyYAML
+-e .
