@@ -1,1 +1,8 @@
-key: value
+MAX_LEN: 300
+MAX_WORDS: 50000
+EPOCHS: 5
+BATCH_SIZE: 128
+VALIDATION_SPLIT: 0.3
+LOSS: 'binary_crossentropy'
+METRICS: ["accuracy"]
+ACTIVATION: "sigmoid"

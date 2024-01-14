@@ -10,3 +10,19 @@ data_transformation:
   root_dir: artifacts/data_transformation
   data_path: artifacts/data_ingestion/hate_speech_data/2020-12-31-DynamicallyGeneratedHateDataset-entries-v0.1.csv
   transformed_data_path: artifacts/data_transformation/final.csv
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  cleaned_data: artifacts/data_transformation/final.csv
+  tokenizer_path: artifacts/model_trainer/tokenizer.pickle
+  model_path: artifacts/model_trainer/model.h5
+  X_test_path: artifacts/model_trainer/test_data/x_test.csv
+  y_test_path: artifacts/model_trainer/test_data/y_test.csv
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  model_path: artifacts/model_trainer/model.h5
+  tokenizer_path: artifacts/model_trainer/tokenizer.pickle
+  evaluation_file_path: artifacts/model_evaluation/loss.txt
+  X_test_path: artifacts/model_trainer/test_data/x_test.csv
+  y_test_path: artifacts/model_trainer/test_data/y_test.csv

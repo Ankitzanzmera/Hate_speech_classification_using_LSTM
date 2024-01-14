@@ -6,6 +6,7 @@ from box import ConfigBox
 from box.exceptions import BoxValueError
 from typing import Any
 from hate_speech_classification.utils.exception import CustomException
+import pickle
 
 @ensure_annotations
 def read_yaml(path_to_yaml:Path) -> ConfigBox:
@@ -21,5 +22,13 @@ def create_directories(list_of_directory: list):
     try:
         for path in list_of_directory:
             os.makedirs(path,exist_ok= True)
+    except Exception as e:
+        raise CustomException(e,sys)
+    
+# @ensure_annotations
+def save_tokenizer(path:Path,tokenizer:object) -> None:
+    try:
+        with open(path, 'wb') as handle:
+            pickle.dump(tokenizer,handle,protocol = pickle.HIGHEST_PROTOCOL)
     except Exception as e:
         raise CustomException(e,sys)
